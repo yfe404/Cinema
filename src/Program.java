@@ -8,6 +8,15 @@ public class Program {
 	}
 	
 	protected void run(){
+		/* BEGIN TEST DATABASE */
+		SQLiteJDBC database = new SQLiteJDBC();
+		try{
+			database.createFilmTable();
+			database.insertFilms(cinema.getListe());
+		}catch(Exception e){
+			
+		}
+		/* END TEST DATABASE */
 		afficheur.setVisible(true);
 	}
 		/*int choix = afficheur.afficherMenu();
